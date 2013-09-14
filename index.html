@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section>
+        <h1>
+            <br>
+        </h1>
+<h1>node.js</h1>
+<div>a beginner's guide</div>
+<div>Rob Phippen</div>
+<div>
+        <br>
+    </div>
+</section>
+<section>
+    <h2>what the heck is node?</h2>
+<p>
+<!--[if gte mso 9]>
+<xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:PunctuationKerning>
+</w:PunctuationKerning>
+  <w:ValidateAgainstSchemas>
+</w:ValidateAgainstSchemas>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables>
+</w:BreakWrappedTables>
+   <w:SnapToGridInCell>
+</w:SnapToGridInCell>
+   <w:WrapTextWithPunct>
+</w:WrapTextWithPunct>
+   <w:UseAsianBreakRules>
+</w:UseAsianBreakRules>
+   <w:DontGrowAutofit>
+</w:DontGrowAutofit>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml>
+<![endif]-->
+</p>
+<p class="fragment">
+<!--[if gte mso 9]>
+<xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml>
+<![endif]-->
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<span style="font-family: Lato; color: rgb(238, 238, 238);" lang="EN">A tiny (5.6MB install) runtime for creating web
+Servers using JavaScript that is generating a lot of interest <br>
+</span>
+</p>
+<p class="fragment">
+<font face="Lato">
+    <span>Part of the 'JavaScript everywhere' thing</span>
+</font>
+</p>
+<p class="fragment">
+<span style="font-family: Lato; color: rgb(238, 238, 238);" lang="EN">
+    See Jerry Cuomo talking about it <a href="http://www.youtube.com/watch?v=4lKtxbHk7d8&amp;feature=player_detailpage#t=372">here</a>
+<br>
+</span>
+</p>
+<p>
+<span style="font-family: Lato; color: rgb(238, 238, 238);" lang="EN">
+    <br>
+</span>
+</p>
+</section>
+<section>
+    <section>show me some code<code>
+        <br>
+        <br>
+    </code>
+    <p>
+    <font face="monospace">The 'Hello World' server</font>
+</p>
+<pre><code>var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/'); </code></pre>
+<span style="font-family: &quot;Courier New&quot;; color: gainsboro; background: none repeat scroll 0% 0% rgb(63, 63, 63);" lang="EN">
+</span>
+</section>
+<section>
+    <h2>...run that by me again...</h2>
+<p data-fragment-index="0" class="fragment" align="left">Load the http module<br>
+</p>
+<p>
+</p>
+<pre data-fragment-index="1" class="fragment">
+<code>    <font color="#00ff00">var http = require('http');</font>
+</code>
+</pre>
+<p data-fragment-index="2" class="fragment" align="left">...create a server</p>
+<pre data-fragment-index="3" class="fragment">
+<code>    <font color="#00ff00">http.createServer(...<br>)...</font>
+</code>
+</pre>
+<div data-fragment-index="4" class="fragment" align="left">...passing a 
+<b>
+<font color="#ffff00">callback</font>
+<font color="#45818e"> - </font>
+<font color="#e69138">which we declare inline</font>
+</b>
+<font color="#e69138">&nbsp;</font>
+</div>
+<pre data-fragment-index="5" class="fragment">
+<code>
+    <font style="color: rgb(204, 204, 204);" color="#cccccc">    http.createServer(</font>
+    <font color="#00ff00">function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+<font>}</font>
+</font>
+<font style="color: rgb(204, 204, 204);" color="rgb(217, 217, 217)">)...</font>
+</code>
+</pre>
+<p style="text-align: left;" class="fragment">...and finally setting our server to listen on port 1337</p>
+<pre><code> <span>http.createServer(function (req, res) {</span></code><span style="color: rgb(220, 220, 220); font-family: monospace; font-size: 20px; font-style: normal; font-variant: normal; background-color: rgb(63, 63, 63);">  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).</span><span style="font-family: monospace; font-size: 20px; font-style: normal; font-variant: normal; background-color: rgb(63, 63, 63);"><font color="#00ff00">listen(1337, '127.0.0.1');</font></span></pre>
+<p style="text-align: left;">
+<br>
+</p>
+</section>
+</section>
+<section>
+    <h2>Neat things about node</h2>
+<div>#1 npm</div>
+<div>
+    <ul>
+        <li>Node Package Manager</li>
+        <li>41000 Packages</li>
+    </ul>
+</div>
+<div>install a package like this</div>
+<pre><code>c:\users\phippen&gt; npm install node-red</code></pre>
+<div class="fragment">...which is an advertisement for our very own @knolleary's Node Red, a visual programming environment for node<br>
+</div>
+</section>
+<section>
+    <section>
+        <h2>Things you need to know</h2>
+        <p>
+        <br>
+    </p>
+    <p>
+    <br>
+</p>
+<p>
+<br>
+</p>
+<p>#1 node is single threaded</p>
+<p>!</p>
+</section>
+<section>
+    <h2>...it's better than it sounds</h2>
+    <p>
+    <b>Your</b> code runs in a single thread</p>
+    <p>All IO operations happen asynchronously</p>When you call an IO operation, you're adding an event to an event queue<br>Node runs an 'event loop' <br>
+    <ol>
+        <li>that picks up an event<br>
+        </li>
+        <li> processes it</li>
+        <li>when it's done, calls your callback<br>
+        </li>
+    </ol>
+</section>
+<section>
+    <h2>...and you can create 'clusters' of nodes</h2>
+<pre><code>
+    var cluster = require('cluster');
+
+    if (cluster.isMaster) {
+        //start up workers for each cpu
+        require('os').cpus().forEach(function() {
+            cluster.fork();
+        });
+
+    } else {
+        //load up your application as a worker
+        require('./app.js');
+    }
+</code></pre>
+<p>
+<br>
+</p>
+</section>
+</section>
+<section>
+    <h2>Find this presentation at</h2>
+    <p><a href="http://slid.es/robphippen/node-in-5">http://slid.es/robphippen/node-in-5</a></p>
+    <p>Enhance and beautify it here</p>
+    <p>
+    <a href="https://github.com/RobPhippen/node-in-5">https://github.com/RobPhippen/node-in-5</a>
+    <br>
+</p>
+</section>
+</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
