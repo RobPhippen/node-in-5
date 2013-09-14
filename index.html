@@ -36,7 +36,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
-    <section>
+<section>
         <h1>
             <br>
         </h1>
@@ -49,36 +49,7 @@
 </section>
 <section>
     <h2>what the heck is node?</h2>
-<p>
-<!--[if gte mso 9]>
-<xml>
- <w:WordDocument>
-  <w:View>Normal</w:View>
-  <w:Zoom>0</w:Zoom>
-  <w:PunctuationKerning>
-</w:PunctuationKerning>
-  <w:ValidateAgainstSchemas>
-</w:ValidateAgainstSchemas>
-  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
-  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
-  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
-  <w:Compatibility>
-   <w:BreakWrappedTables>
-</w:BreakWrappedTables>
-   <w:SnapToGridInCell>
-</w:SnapToGridInCell>
-   <w:WrapTextWithPunct>
-</w:WrapTextWithPunct>
-   <w:UseAsianBreakRules>
-</w:UseAsianBreakRules>
-   <w:DontGrowAutofit>
-</w:DontGrowAutofit>
-  </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
- </w:WordDocument>
-</xml>
-<![endif]-->
-</p>
+
 <p class="fragment">
 <!--[if gte mso 9]>
 <xml>
@@ -151,12 +122,12 @@ console.log('Server running at http://127.0.0.1:1337/'); </code></pre>
 <p>
 </p>
 <pre data-fragment-index="1" class="fragment">
-<code>    <font color="#00ff00">var http = require('http');</font>
-</code>
+<code>var http = require('http');</code>
 </pre>
 <p data-fragment-index="2" class="fragment" align="left">...create a server</p>
 <pre data-fragment-index="3" class="fragment">
-<code>    <font color="#00ff00">http.createServer(...<br>)...</font>
+<code>http.createServer(...
+)...
 </code>
 </pre>
 <div data-fragment-index="4" class="fragment" align="left">...passing a 
@@ -167,17 +138,12 @@ console.log('Server running at http://127.0.0.1:1337/'); </code></pre>
 </b>
 <font color="#e69138">&nbsp;</font>
 </div>
-<pre data-fragment-index="5" class="fragment">
-<code>
-    <font style="color: rgb(204, 204, 204);" color="#cccccc">    http.createServer(</font>
-    <font color="#00ff00">function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-<font>}</font>
-</font>
-<font style="color: rgb(204, 204, 204);" color="rgb(217, 217, 217)">)...</font>
-</code>
-</pre>
+<p data-fragment-index="5" class="fragment" align="left">
+<code style="colour:white; font-size:20px">http.createServer(</code><code style="color:blue; font-size:20px">function (req, res) {</code><br>
+<code style="color:blue; font-size:20px">        res.writeHead(200, {'Content-Type': 'text/plain'});</code><br>
+<code style="color:blue; font-size:20px">        res.end('Hello World\n');</code><br>
+<code style="color:blue; font-size:20px">}</code><code style="color:white; font-size:20px">)...</code>
+</p>
 <p style="text-align: left;" class="fragment">...and finally setting our server to listen on port 1337</p>
 <pre><code> <span>http.createServer(function (req, res) {</span></code><span style="color: rgb(220, 220, 220); font-family: monospace; font-size: 20px; font-style: normal; font-variant: normal; background-color: rgb(63, 63, 63);">  res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello World\n');
